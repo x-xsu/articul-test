@@ -8,7 +8,9 @@
 
 // Основное
 @import "base/fonts";
+@import "base/reset";
 @import "base/general";
 
 // БЭМ-блоки
+@import "../blocks/components/components";
 @import "../blocks/modules/modules";

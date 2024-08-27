@@ -1,0 +1,19 @@
+// Path
+$path-img: "../img/inhtml/";
+$path-fonts: "../fonts/";
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 1201px;
+$xl: 1801px;
+
+:root {
+  --cl-primary: #c31e54;
+  --cl-text: #fff;
+  --cl-background: #000;
+
+  --font-base: "Articul";
+  --font-medium: "DrukWide-Medium";
+}
+
