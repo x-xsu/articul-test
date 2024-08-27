@@ -1,0 +1,8 @@
+mixin tabs(items)
+  .tabs&attributes(attributes)
+    ul.tabs__list&attributes(attributes)
+      each item, index in items
+        li.tabs__item
+          button(data-tab= item.data class= item.active && "active").tabs__button #{item.title}
+    if block
+      block

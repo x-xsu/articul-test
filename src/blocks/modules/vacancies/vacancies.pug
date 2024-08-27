@@ -1,0 +1,9 @@
+include ../../components/vacancy/vacancy
+
+-
+  const vacncies = ["Middle web designer", "Системный  аналитик", "IT sales manager", "Head of marketing & PR"]
+
+section.vacancies
+  .container.vacancies__container
+    each vacancy in vacncies
+      +vacancy(vacancy)
