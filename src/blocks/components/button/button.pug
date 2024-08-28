@@ -2,5 +2,5 @@ mixin button(props)
   - const { img, text } = props;
   button(type="button").button&attributes(attributes)
     if img
-      img(src="/img/inhtml/" + img , alt="", aria-hidden="true")
+      img(src="./img/inhtml/" + img , alt="", aria-hidden="true")
     span #{text}
