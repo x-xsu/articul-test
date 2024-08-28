@@ -36,28 +36,6 @@
     }
   }
 
-  &__title {
-    @include title;
-
-    font-size: clamp(rem(36), 11.7vw, rem(132));
-    line-height: clamp(rem(48), 13vw, rem(142));
-    margin-block: rem(20);
-
-    > span {
-      display: block;
-
-      &:nth-child(2) {
-        color: var(--cl-primary);
-      }
-    }
-  }
-
-  &__text {
-    margin-bottom: rem(46);
-    font-size: clamp(rem(16), 2.8vw, rem(26));
-    text-wrap: balance;
-  }
-
   &__number {
     position: relative;
     display: flex;
@@ -79,6 +57,28 @@
       font-size: clamp(rem(52), 9.1vw, rem(131));
       font-family: var(--font-medium);
     }
+  }
+
+  &__title {
+    @include title;
+
+    font-size: clamp(rem(36), 11.7vw, rem(132));
+    line-height: clamp(rem(48), 13vw, rem(142));
+    margin-block: rem(20);
+
+    span {
+      display: block;
+
+      &:nth-child(2) {
+        color: var(--cl-primary);
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(46);
+    font-size: clamp(rem(16), 2.8vw, rem(26));
+    text-wrap: balance;
   }
 
   @media (width >= $md) {

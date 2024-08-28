@@ -59,6 +59,7 @@
     &__header {
       border-width: 3px;
     }
+
     &__button {
       span {
         width: rem(50);
@@ -89,6 +90,7 @@
 
 .accordion + .accordion {
   margin-top: -2px;
+
   @media (width >= $md) {
     margin-top: -3px;
   }
