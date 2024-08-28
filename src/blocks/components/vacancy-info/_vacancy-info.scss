@@ -53,7 +53,7 @@
     width: 100%;
   }
 
-  @media (width >= $md) {
+  @media (min-width: $md) {
     &__content {
       flex-flow: row wrap;
       justify-content: space-between;
@@ -83,7 +83,7 @@
     }
   }
 
-  @media (width >= $lg) {
+  @media (min-width: $lg) {
     position: relative;
 
     &__content {

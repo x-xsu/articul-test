@@ -1,0 +1,23 @@
+.tag {
+  display: block;
+  @include title;
+  white-space: nowrap;
+
+  font-size: rem(11);
+  line-height: rem(32);
+  border: 2px solid var(--cl-primary);
+  border-radius: rem(100);
+  padding-inline: rem(12);
+
+  @media (min-width: $md) {
+    font-size: rem(16);
+    line-height: rem(52);
+    padding-inline: rem(20);
+  }
+
+  @media (min-width: $xl) {
+    font-size: rem(23);
+    line-height: rem(66);
+    padding-inline: rem(26);
+  }
+}

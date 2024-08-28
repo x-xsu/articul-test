@@ -13,17 +13,16 @@
     display: block;
     padding-bottom: rem(12);
     font-size: clamp(rem(12), 3vw - 0.3rem, rem(22));
+    border-bottom: 2px solid transparent;
+    transition: $duration;
 
     &.active {
-      &::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #fff;
-        content: "";
-      }
+      border-color: var(--cl-text);
+      cursor: default;
+    }
+
+    &:not(.active):hover {
+      color: var(--cl-primary);
     }
   }
 
@@ -40,31 +39,21 @@
     }
   }
 
-  @media (width >= $md) {
+  @media (min-width: $md) {
     &__list {
       justify-content: space-between;
     }
 
     &__button {
       padding-bottom: rem(19);
-
-      &.active {
-        &::after {
-          height: rem(4);
-        }
-      }
+      border-width: rem(4);
     }
   }
 
-  @media (width >= $xl) {
+  @media (min-width: $xxl) {
     &__button {
       padding-bottom: rem(23);
-
-      &.active {
-        &::after {
-          height: rem(5);
-        }
-      }
+      border-width: rem(5);
     }
   }
 }

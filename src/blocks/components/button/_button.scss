@@ -16,14 +16,14 @@
     height: rem(19);
   }
 
-  @media (width >= $md) {
+  @media (min-width: $md) {
     img {
       width: rem(30);
       height: rem(30);
     }
   }
 
-  @media (width >= $lg) {
+  @media (min-width: $lg) {
     img {
       width: rem(36);
       height: rem(36);

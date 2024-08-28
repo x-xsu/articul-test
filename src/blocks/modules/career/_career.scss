@@ -14,28 +14,12 @@
   }
 
   &__item {
-    span {
-      display: block;
-      @include title;
-
-      font-size: rem(11);
-      line-height: rem(32);
-      border: 2px solid var(--cl-primary);
-      border-radius: rem(100);
-      padding-inline: rem(12);
-    }
-
-    // height: 100%;
-
     &:first-child {
       text-align: end;
-
-      // transform: rotate(-45deg);
-      // transform-origin: bottom left;
     }
 
     &:not(:first-child) {
-      span {
+      .tag {
         transform: rotate(180deg);
       }
     }
@@ -92,12 +76,6 @@
   @media (min-width: $md) {
     &__container {
       padding-block-end: rem(170);
-    }
-
-    &__item span {
-      font-size: rem(16);
-      line-height: rem(52);
-      padding-inline: rem(20);
     }
 
     &__title {
@@ -158,16 +136,10 @@
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: $xl) {
     &__list {
       margin-bottom: rem(-112);
       padding-left: rem(144);
-    }
-
-    &__item span {
-      font-size: rem(23);
-      line-height: rem(66);
-      padding-inline: rem(26);
     }
 
     &__title {
@@ -180,7 +152,7 @@
     }
   }
 
-  @media (min-width: $xl) {
+  @media (min-width: 1800px) {
     &__list {
       margin-bottom: rem(-160);
     }

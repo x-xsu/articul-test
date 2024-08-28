@@ -33,7 +33,7 @@
         height: 2px;
         background-color: #fff;
         transform: translate(-50%, -50%);
-        transition: transform 0.4s;
+        transition: transform $duration;
         content: "";
       }
 
@@ -52,10 +52,10 @@
   &__panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: max-height $duration ease-out;
   }
 
-  @media (width >= $md) {
+  @media (min-width: $md) {
     &__header {
       border-width: 3px;
     }
@@ -73,7 +73,7 @@
     }
   }
 
-  @media (width >= $xl) {
+  @media (min-width: $xxl) {
     &__button {
       span {
         width: rem(96);
@@ -91,7 +91,7 @@
 .accordion + .accordion {
   margin-top: -2px;
 
-  @media (width >= $md) {
+  @media (min-width: $md) {
     margin-top: -3px;
   }
 }
