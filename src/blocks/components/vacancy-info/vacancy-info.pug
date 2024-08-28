@@ -1,5 +1,6 @@
 include props
 
+include ../button/button
 include ../tabs/tabs
 
 .vacancy-info
@@ -19,3 +20,8 @@ include ../tabs/tabs
         .vacancy-info__decription Обязанности
       .tabs-content(id=vacancyItem.tabs[2].data)
         .vacancy-info__decription Стек
+      +button({
+        img: "mail.svg", 
+        text: "Откликнуться"
+      }).vacancy-info__button
+      

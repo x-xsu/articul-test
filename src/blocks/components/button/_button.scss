@@ -1,0 +1,32 @@
+.button {
+  @include title;
+  font-size: clamp(rem(13), 2.15vw, rem(28));
+  background-color: var(--cl-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: clamp(rem(10), 2vw, rem(21));
+  min-height: clamp(rem(34), 5.2vw, rem(72));
+  border-radius: rem(100);
+  padding-inline: rem(40);
+
+  img {
+    width: rem(19);
+    height: rem(19);
+  }
+
+  @media (width >= $md) {
+    img {
+      width: rem(30);
+      height: rem(30);
+    }
+  }
+
+  @media (width >= $lg) {
+    img {
+      width: rem(36);
+      height: rem(36);
+    }
+  }
+}
