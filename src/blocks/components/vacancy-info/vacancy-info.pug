@@ -11,15 +11,15 @@ include ../tabs/tabs
     .vacancy-info__text Самостоятельный дизайнер с отличной насмотренностью, который способен без помощи арт-директора решать как базовые дизайн-задачи так и сложные  (дизайн лендингов, подач, презентаций и тд.)
     +tabs(vacancyItem.tabs).vacancy-info__tabs.js-tabs
       .tabs-content.active(id=vacancyItem.tabs[0].data)
-        .vacancy-info__decription
+        .vacancy-info__description
           ul.vacancy-info__list
-            each item of vacancyItem.decriptionList
+            each item of vacancyItem.descriptionList
               li.vacancy-info__list-item #{item}
           //- button
       .tabs-content(id=vacancyItem.tabs[1].data)
-        .vacancy-info__decription Обязанности
+        .vacancy-info__description Обязанности
       .tabs-content(id=vacancyItem.tabs[2].data)
-        .vacancy-info__decription Стек
+        .vacancy-info__description Стек
       +button({
         img: "mail.svg", 
         text: "Откликнуться"

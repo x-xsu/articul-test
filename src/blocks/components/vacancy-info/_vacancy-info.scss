@@ -29,9 +29,12 @@
     text-wrap: balance;
   }
 
+  &__description {
+    padding-block: rem(10);
+  }
+
   &__list {
     font-size: clamp(rem(16), 2.6vw, rem(20));
-    padding-block: rem(10);
     list-style: none;
 
     &-item {
@@ -65,11 +68,14 @@
       flex-basis: 100%;
     }
 
+    &__description {
+      padding-block: rem(50);
+    }
+
     &__list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: rem(15) rem(74);
-      padding-block: rem(50);
 
       &-item {
         padding-block: rem(25) rem(35);

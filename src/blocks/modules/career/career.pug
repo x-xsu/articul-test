@@ -4,13 +4,23 @@
 section.career
   .container.career__container
     ul.career__list
-      each item in items 
-        li.career__item #{item}
+      li.career__item(data-aos="fade-down" data-aos-delay="200") 
+        span(data-aos="tilt" data-aos-delay="800" data-aos-duration="400" data-aos-easing="ease-in") Удаленка
+      li.career__item(data-aos="fade-down" data-aos-delay="150") 
+        span Высокая зарплата
+      li.career__item(data-aos="fade-down" data-aos-delay="100") 
+        span Обучение
+      li.career__item(data-aos="fade-down" data-aos-delay="50") 
+        span Вечеринки
+      li.career__item(data-aos="fade-down") 
+        span Сильная команда
     h1.career__title
-      span карьера
-      span в articul
+      div 
+        span(data-aos="slide-up") карьера
+      div 
+        span(data-aos="slide-up") в articul
     .career__box
-      .career__text Мы верим, что каждый вновь приходящий обогащает нашу жизнь, привносит свои идеи, свои смыслы, свое настроение, свою уникальность
-      .career__number 
-        img(src="/img/inhtml/careers-words.svg", alt="", srcset="")
+      .career__text(data-aos="fade-zoom-in" data-aos-delay="800") Мы верим, что каждый вновь приходящий обогащает нашу жизнь, привносит свои идеи, свои смыслы, свое настроение, свою уникальность
+      .career__number(data-aos="fade-zoom-in" data-aos-delay="800")
+        img(src="/img/inhtml/careers-words.svg", alt="", srcset="")(data-aos="rotate" data-aos-delay="800")
         span 5

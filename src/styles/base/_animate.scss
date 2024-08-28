@@ -1,0 +1,20 @@
+html:not(.no-js) {
+  [data-aos="rotate"] {
+    transform: rotate(180deg);
+    transition-property: transform;
+
+    &.aos-animate {
+      transform: rotate(0);
+    }
+  }
+
+  [data-aos="tilt"] {
+    transform: rotate(0) translateX(0);
+    transform-origin: bottom;
+    transition-property: transform;
+
+    &.aos-animate {
+      transform: rotate(-45deg) translateX(5px);
+    }
+  }
+}

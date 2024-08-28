@@ -81,5 +81,8 @@
       "eslint --fix"
     ]
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
 }
