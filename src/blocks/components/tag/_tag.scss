@@ -1,13 +1,13 @@
 .tag {
   display: block;
-  @include title;
-  white-space: nowrap;
-
   font-size: rem(11);
   line-height: rem(32);
+  white-space: nowrap;
   border: 2px solid var(--cl-primary);
   border-radius: rem(100);
   padding-inline: rem(12);
+
+  @include title;
 
   @media (min-width: $md) {
     font-size: rem(16);

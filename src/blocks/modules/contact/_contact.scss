@@ -8,13 +8,14 @@
 
   &__text {
     @include title;
+
+    max-width: rem(810);
     font-size: clamp(rem(18), 3.3vw, rem(25));
     text-wrap: balance;
-    max-width: rem(810);
 
     a {
-      white-space: nowrap;
       padding-bottom: rem(4);
+      white-space: nowrap;
       border-bottom: 2px solid var(--cl-text);
       transition: $duration;
 
@@ -28,10 +29,10 @@
   &__tags {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-end;
-    height: rem(220);
+    justify-content: center;
     width: rem(290);
+    height: rem(220);
     padding-right: rem(80);
     margin-inline: auto;
 
@@ -56,6 +57,7 @@
 
     &__text {
       font-size: clamp(rem(25), 2.7vw, rem(35));
+
       a {
         padding-bottom: rem(6);
         border-bottom: 3px solid var(--cl-text);
@@ -63,8 +65,8 @@
     }
 
     &__tags {
-      height: rem(335);
       width: rem(410);
+      height: rem(335);
       padding-right: rem(110);
     }
   }
@@ -72,8 +74,8 @@
   @media (min-width: $lg) {
     &__container {
       flex-direction: row;
-      align-items: center;
       gap: rem(140);
+      align-items: center;
       padding-block-start: rem(120);
     }
 
@@ -85,8 +87,8 @@
 
   @media (min-width: $xl) {
     &__tags {
-      height: rem(445);
       width: rem(570);
+      height: rem(445);
       padding-right: rem(150);
     }
   }

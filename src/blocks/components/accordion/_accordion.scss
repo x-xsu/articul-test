@@ -16,6 +16,7 @@
     width: 100%;
     text-align: left;
     text-transform: inherit;
+    transition: $duration;
 
     span {
       position: relative;
@@ -33,7 +34,7 @@
         height: 2px;
         background-color: #fff;
         transform: translate(-50%, -50%);
-        transition: transform $duration;
+        transition: $duration;
         content: "";
       }
 
@@ -46,6 +47,15 @@
       span::before {
         transform: translate(-50%, -50%);
       }
+    }
+
+    &:hover {
+      color: var(--cl-primary);
+    }
+
+    &:hover span::before,
+    &:hover span::after {
+      background-color: var(--cl-primary);
     }
   }
 
