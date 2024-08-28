@@ -6,8 +6,8 @@
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     gap: clamp(rem(7), 1.3vw, rem(12));
+    align-items: flex-end;
     list-style: none;
     writing-mode: vertical-lr;
     margin-block: auto;
@@ -15,15 +15,18 @@
 
   &__item {
     @include title;
+
     font-size: clamp(rem(11), 2vw, rem(23));
     line-height: clamp(rem(32), 6vw, rem(66));
-    padding-inline: clamp(rem(12), 2.6vw, rem(22));
-    border-radius: clamp(rem(32), 6vw, rem(66));
     border: 2px solid var(--cl-primary);
+    border-radius: clamp(rem(32), 6vw, rem(66));
+    padding-inline: clamp(rem(12), 2.6vw, rem(22));
+
     // height: 100%;
 
     &:first-child {
       text-align: end;
+
       // transform: rotate(-45deg);
       // transform-origin: bottom left;
     }
@@ -35,6 +38,7 @@
 
   &__title {
     @include title;
+
     font-size: clamp(rem(36), 11.7vw, rem(132));
     line-height: clamp(rem(48), 13vw, rem(142));
     margin-block: rem(20);
@@ -49,9 +53,8 @@
   }
 
   &__text {
-    font-size: clamp(rem(16), 2.8vw, rem(26));
-    line-height: clamp(rem(20), 3.6vw, rem(35));
     margin-bottom: rem(46);
+    font-size: clamp(rem(16), 2.8vw, rem(26));
     text-wrap: balance;
   }
 
@@ -73,13 +76,12 @@
     }
 
     span {
-      font-family: var(--font-medium);
       font-size: clamp(rem(52), 9.1vw, rem(131));
-      line-height: 1;
+      font-family: var(--font-medium);
     }
   }
 
-  @media (min-width: $md) {
+  @media (width >= $md) {
     &__title {
       margin-block: rem(25) rem(40);
     }
@@ -102,7 +104,7 @@
     }
   }
 
-  @media (min-width: $lg) {
+  @media (width >= $lg) {
     &__list {
       margin-block: 0;
       margin-bottom: rem(-102);
@@ -129,7 +131,7 @@
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (width >= 1400px) {
     &__list {
       margin-bottom: rem(-112);
     }
@@ -140,7 +142,7 @@
     }
   }
 
-  @media (min-width: $xl) {
+  @media (width >= $xl) {
     &__list {
       margin-bottom: rem(-160);
     }

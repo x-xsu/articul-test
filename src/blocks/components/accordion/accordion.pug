@@ -1,0 +1,7 @@
+mixin accordion(title)
+  article.accordion
+    h2.accordion__header 
+      button(type="button" aria-expanded="false").accordion__button.js-accordion #{title}
+        span
+    .accordion__panel
+      include ../vacancy-info/vacancy-info

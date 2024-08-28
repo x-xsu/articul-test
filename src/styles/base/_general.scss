@@ -2,12 +2,11 @@ body {
   font-family: var(--font-base), "Arial", "Verdana", sans-serif;
   color: var(--cl-text);
   font-size: rem(16);
-  line-height: rem(22);
+  line-height: 1.3;
   background-color: var(--cl-background);
 
-  @media (min-width: $md) {
+  @media (width >= $md) {
     font-size: clamp(rem(18), 2.3vw, rem(22));
-    line-height: clamp(rem(25), 3.2vw, rem(32));
   }
 }
 
@@ -17,7 +16,7 @@ body {
   margin-inline: auto;
   padding-inline: rem(16);
 
-  @media (min-width: $md) {
+  @media (width >= $md) {
     padding-inline: clamp(rem(33), 2.3vw, rem(60));
   }
 }

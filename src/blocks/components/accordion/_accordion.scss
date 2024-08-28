@@ -1,0 +1,95 @@
+.accordion {
+  &__header {
+    @include title;
+
+    font-size: clamp(rem(20), 5vw, rem(70));
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding-block: clamp(rem(18), 5.2vw, rem(60));
+  }
+
+  &__button {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    text-transform: inherit;
+
+    span {
+      position: relative;
+      display: block;
+      flex-shrink: 0;
+      width: rem(21);
+      height: rem(21);
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+        transition: transform 0.4s;
+        content: "";
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+
+    &[aria-expanded="true"] {
+      span::before {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+
+  @media (width >= $md) {
+    &__header {
+      border-width: 3px;
+    }
+    &__button {
+      span {
+        width: rem(50);
+        height: rem(50);
+
+        &::before,
+        &::after {
+          height: rem(5);
+        }
+      }
+    }
+  }
+
+  @media (width >= $xl) {
+    &__button {
+      span {
+        width: rem(96);
+        height: rem(96);
+
+        &::before,
+        &::after {
+          height: rem(10);
+        }
+      }
+    }
+  }
+}
+
+.accordion + .accordion {
+  margin-top: -2px;
+  @media (width >= $md) {
+    margin-top: -3px;
+  }
+}

@@ -1,2 +1,2 @@
-import "%components%/vacancy/vacancy";
+import "%components%/accordion/accordion";
 import "%components%/tabs/tabs";

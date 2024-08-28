@@ -1,26 +1,28 @@
 .tabs {
   &__list {
-    list-style: none;
     display: flex;
-    align-items: flex-end;
     gap: rem(35);
+    align-items: flex-end;
+    list-style: none;
   }
 
   &__button {
     @include title;
-    display: block;
+
     position: relative;
+    display: block;
     padding-bottom: rem(12);
+    font-size: clamp(rem(12), 3vw - 0.3rem, rem(22));
 
     &.active {
       &::after {
-        content: "";
         position: absolute;
-        left: 0;
         bottom: 0;
+        left: 0;
         width: 100%;
         height: 2px;
         background-color: #fff;
+        content: "";
       }
     }
   }
@@ -34,6 +36,34 @@
       &::-webkit-scrollbar {
         display: none;
         width: 0 !important;
+      }
+    }
+  }
+
+  @media (width >= $md) {
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__button {
+      padding-bottom: rem(19);
+
+      &.active {
+        &::after {
+          height: rem(4);
+        }
+      }
+    }
+  }
+
+  @media (width >= $xl) {
+    &__button {
+      padding-bottom: rem(23);
+
+      &.active {
+        &::after {
+          height: rem(5);
+        }
       }
     }
   }

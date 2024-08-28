@@ -1,4 +1,4 @@
-include ../../components/vacancy/vacancy
+include ../../components/accordion/accordion
 
 -
   const vacncies = ["Middle web designer", "Системный  аналитик", "IT sales manager", "Head of marketing & PR"]
@@ -6,4 +6,4 @@ include ../../components/vacancy/vacancy
 section.vacancies
   .container.vacancies__container
     each vacancy in vacncies
-      +vacancy(vacancy)
+      +accordion(vacancy)
